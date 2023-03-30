@@ -1,0 +1,20 @@
+{
+  "name": "GitHub Background Changer",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Change the background color of GitHub.com",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "contextMenus"],
+  "content_scripts": [
+    {
+      "matches": ["https://cliq.zoho.com/company/640384066/*"],
+      "run_at": "document_end",
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
